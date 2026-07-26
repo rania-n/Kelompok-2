@@ -15,6 +15,14 @@
                     <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
+
+
+                    {{-- Menu Tambahan: Navigasi ke Halaman Kotak Saran pada Sidebar Utama --}}
+                    <flux:sidebar.item icon="chat-bubble-left-right" :href="route('saran')" :current="request()->routeIs('saran')" wire:navigate>
+                        Kotak Saran
+                    </flux:sidebar.item>
+
+
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 

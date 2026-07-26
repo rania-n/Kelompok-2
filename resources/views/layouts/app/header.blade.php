@@ -13,7 +13,13 @@
                 <flux:navbar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
                 </flux:navbar.item>
+                {{-- Menu Tambahan: Navigasi ke Halaman Saran di Header Desktop --}}
+                <flux:navbar.item icon="chat-bubble-left-right" :href="route('saran')" :current="request()->routeIs('saran')" wire:navigate>
+                    Kotak Saran
+                </flux:navbar.item>
             </flux:navbar>
+
+
 
             <flux:spacer />
 
@@ -56,6 +62,13 @@
                     <flux:sidebar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard')  }}
                     </flux:sidebar.item>
+
+                    {{-- Menu Tambahan: Navigasi ke Halaman Kotak Saran di Sidebar Mobile --}}
+                    <flux:sidebar.item icon="chat-bubble-left-right" :href="route('saran')" :current="request()->routeIs('saran')" wire:navigate>
+                        Kotak Saran
+                    </flux:sidebar.item>
+
+
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 
